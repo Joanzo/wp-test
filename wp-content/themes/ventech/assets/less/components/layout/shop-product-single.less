@@ -1,0 +1,69 @@
+/*
+ * SHOP PRODUCT SINGLE CSS
+ * files: shop-product-single.less
+ * Single Page Product Styling
+ */
+.product-title {
+    font-size: 24px;
+    font-family: @font-primary;
+    position: relative;
+    margin: 0 0 5px;
+    font-weight: 300;
+}
+.product-subtitle {
+    font-size: 14px;
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 20px;
+    .sub-item {
+        margin-right: 20px;
+    }
+}
+.product-subtitle::after {
+    background: @color-body none repeat scroll 0 0;
+    bottom: 0px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 46px;
+}
+.product-image-nav {
+    border-top: 1px solid @color-border-line;
+    border-bottom: 1px solid @color-border-line;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    .list-item {
+        .opacity(.5);
+    }
+    .list-item.slick-current {
+        .opacity(1);
+    }
+}
+.product-body {
+    margin-bottom: 20px;
+}
+.product-price-group {
+    .clearfix();
+}
+.product-main-price {
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+}
+.product-price-tag {
+    font-size: 13px;
+    background: @color-danger-2;
+    color: @color-white;
+    padding: 4px 8px;
+    font-weight: 300;
+    float: left;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.product-quantity {
+    margin-top: 30px;
+}
+.product-button {
+    margin-top: 10px;
+}

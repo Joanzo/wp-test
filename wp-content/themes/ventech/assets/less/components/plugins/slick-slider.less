@@ -1,0 +1,38 @@
+/*
+ * SLICK SLIDER
+ * files: slick-slider.less
+ * Override plugins default styling
+ */
+.slick-dots li {
+    margin: 0;
+}
+.slick-dots li button::before {
+    color: @color-primary-0;
+    font-size: 7px;
+}
+.slick-dots li.slick-active button::before {
+    color: @color-primary-0;
+    .opacity(.8);
+}
+.slick-prev::before,
+.slick-next::before {
+    color: @color-body;
+}
+.slick-prev {
+    z-index: 1;
+}
+.slick-disabled {
+    cursor: default;
+}
+.slick-top-right-arrow {
+    .slick-prev {
+        top: -50px;
+        right: 30px;
+        left: auto;
+    }
+    .slick-next {
+        top: -50px;
+        right: 0;
+        left: auto;
+    }
+}

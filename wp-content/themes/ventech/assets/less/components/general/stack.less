@@ -1,0 +1,192 @@
+/*
+ * STACK CSS
+ * files: stack.less
+ * Arranging left, middle, right, stacking position css
+ */
+
+@height-stack-xs: 40px;
+@height-stack-sm: 60px;
+@height-stack-md: 80px;
+@height-stack-lg: 100px;
+@height-stack-xl: 120px;
+.stack {
+    position: relative;
+}
+.stack-group-container {
+    position: relative;
+}
+.stack-group {
+    display: block;
+}
+.stack-xs {
+    .stack-item, .stack-content {
+        height: @height-stack-xs
+    }
+    .stack-img {
+        max-height: @height-stack-xs;
+    }
+}
+.stack-sm {
+    .stack-item, .stack-content {
+        height: @height-stack-sm
+    }
+    .stack-img {
+        max-height: @height-stack-sm;
+    }
+}
+.stack-md {
+    .stack-item, .stack-content {
+        height: @height-stack-md
+    }
+    .stack-img {
+        max-height: @height-stack-md;
+    }
+}
+.stack-lg {
+    .stack-item, .stack-content {
+        height: @height-stack-lg
+    }
+    .stack-img {
+        max-height: @height-stack-lg;
+    }
+}
+.stack-xl {
+    .stack-item, .stack-content {
+        height: @height-stack-xl
+    }
+    .stack-img {
+        max-height: @height-stack-xl;
+    }
+}
+.stack-top,
+.stack-bottom,
+.stack-left,
+.stack-right {
+    position: absolute;
+}
+.stack-left {
+    left: 0;
+}
+.stack-right {
+    right: 0;
+}
+.stack-top {
+    top: 0;
+}
+.stack-bottom {
+    bottom: 0;
+}
+.stack-main {
+    position: static;
+}
+.stack-main.stack-right {
+    margin-left: auto;
+    display: table;
+}
+.stack-item,
+.stack-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+.stack-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+.stack-full-width {
+    display: table;
+    width: 100%;
+}
+.stack {
+    .stack-group.stack-break-xl {
+        position: static;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    .stack-group.stack-content-break-xl > .stack-item {
+        display: block;
+    }
+    .stack-auto-xl.stack-item,
+    .stack-auto-xl.stack-item > .stack-content {
+        height: auto;
+        display: block;
+    }
+}
+@media (max-width: @sm-width) {
+    .stack {
+        .stack-group.stack-break-xs {
+            position: static;
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+        .stack-group.stack-content-break-xs > .stack-item {
+            display: block;
+        }
+        .stack-auto-xs.stack-item,
+        .stack-auto-xs.stack-item > .stack-content {
+            height: auto;
+            display: block;
+        }
+    }
+}
+@media (max-width: @md-width) {
+    .stack {
+        .stack-group.stack-break-sm {
+            position: static;
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+        .stack-group.stack-content-break-sm > .stack-item {
+            display: block;
+        }
+        .stack-auto-sm.stack-item,
+        .stack-auto-sm.stack-item > .stack-content {
+            height: auto;
+            display: block;
+        }
+    }
+    .center-table-xs {
+        display: table !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+}
+@media (max-width: @lg-width) {
+    .stack {
+        .stack-group.stack-break-md {
+            position: static;
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+        .stack-group.stack-content-break-md > .stack-item {
+            display: block;
+        }
+        .stack-auto-md.stack-item,
+        .stack-auto-md.stack-item > .stack-content {
+            height: auto;
+            display: block;
+        }
+    }
+}
+@media (max-width: @xl-width) {
+    .stack {
+        .stack-group.stack-break-lg {
+            position: static;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .stack-group.stack-content-break-lg > .stack-item {
+            display: block;
+        }
+        .stack-auto-lg.stack-item,
+        .stack-auto-lg.stack-item > .stack-content {
+            height: auto;
+            display: block;
+        }
+    }
+}

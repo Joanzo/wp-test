@@ -1,0 +1,82 @@
+{
+    "items": 
+    [
+        {
+            "category" : "f-icons",
+            "image": {
+                "link": "img/portfolios/01.jpg",
+                "alt": "example image"
+            }
+        },
+        {
+            "category" : "f-logo",
+            "image": {
+                "link": "img/portfolios/02.jpg",
+                "alt": "example image"
+            }
+        },
+        {
+            "category" : "f-icons",
+            "image": {
+                "link": "img/portfolios/03.jpg",
+                "alt": "example image"
+            }
+        },
+        {
+            "category" : "f-web",
+            "image": {
+                "link": "img/portfolios/04.jpg",
+                "alt": "example image"
+            }
+        },
+        {
+            "category" : "f-icons",
+            "image": {
+                "link": "img/portfolios/06.jpg",
+                "alt": "example image"
+            }
+        },
+        {
+            "category" : "f-logo",
+            "image": {
+                "link": "img/portfolios/07.jpg",
+                "alt": "example image"
+            }
+        },
+        {
+            "category" : "f-icons",
+            "image": {
+                "link": "img/portfolios/01.jpg",
+                "alt": "example image"
+            }
+        },
+        {
+            "category" : "f-web",
+            "image": {
+                "link": "img/portfolios/02.jpg",
+                "alt": "example image"
+            }
+        },
+        {
+            "category" : "f-icons",
+            "image": {
+                "link": "img/portfolios/03.jpg",
+                "alt": "example image"
+            }
+        },
+        {
+            "category" : "f-logo",
+            "image": {
+                "link": "img/portfolios/04.jpg",
+                "alt": "example image"
+            }
+        },
+        {
+            "category" : "f-icons",
+            "image": {
+                "link": "img/portfolios/05.jpg",
+                "alt": "example image"
+            }
+        }
+    ]
+}

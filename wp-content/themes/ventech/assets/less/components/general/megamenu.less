@@ -1,0 +1,129 @@
+/*
+ * MEGA MENU CSS
+ * files: megamenu.less
+ * Menu with child open on hover/click
+ */
+
+@color-mega-child-background: @color-white;
+/**************************** 
+  MEGA MENU BASE 
+****************************/
+
+.mega-menu {
+    z-index: 3;
+    .mega-ul, .mega-li, .mega-link {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    .mega-li {
+        list-style: none;
+    }
+    > .mega-ul {
+        display: table;
+        > .mega-li:first-child {
+            margin-left: 0;
+        }
+        > .mega-li:last-child {
+            margin-right: 0;
+        }
+        > .mega-li {
+            float: left;
+            position: relative;
+        }
+    }
+}
+/**************************** 
+  MEGA CHILD 
+****************************/
+
+.mega-menu .open > .mega-child {
+    transform: scale(1);
+    opacity: 1;
+}
+.mega-menu .mega-child {
+    transition: all 0.4s ease 0s;
+    transform: scale(1, 0);
+    transform-origin: 50 0;
+    opacity: 0;
+    background: @color-mega-child-background;
+    position: absolute;
+    top: 100%;
+    margin-top: -5px;
+    z-index: 5;
+    &.mega-caret {
+        &:before {
+            -moz-border-color: none;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: @color-white;
+            border-image: none;
+            border-style: solid;
+            border-width: 12px;
+            content: "";
+            display: block;
+            height: 0;
+            width: 0;
+            opacity: 1;
+            position: absolute;
+            top: -20px;
+        }
+    }
+}
+.mega-menu .open-top {
+    top: auto;
+    bottom: 100%;
+}
+.mega-menu .open-right {
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+}
+.mega-menu .open-left {
+    top: 0;
+    right: 100%;
+    margin-top: 0;
+}
+/**************************** 
+  MEGA MENU DEFAULT STYLING 
+****************************/
+
+.mega-menu {
+    .mega-li {
+        margin-left: 5px;
+        padding: 10px 4px;
+    }
+}
+
+/**************************** 
+  MEGA MENU RESPONSIVE CSS
+****************************/
+
+@media (max-width: @md-width) {
+    .mega-menu.mega-responsive {
+        overflow: hidden;
+        > .mega-ul {
+            width: 100%;
+            > .mega-li {
+                float: none;
+                margin-left: 0;
+                display: block;
+                > .mega-link {
+                    display: block;
+                }
+            }
+        }
+        .mega-child {
+            margin-top: 0;
+            width: 100% !important;
+            //transform-origin: 0 0;
+        }
+        .open > .mega-child {
+            position: static;
+        }
+        .open:hover {
+            background: none;
+        }
+    }
+}

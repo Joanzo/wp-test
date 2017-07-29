@@ -1,0 +1,74 @@
+/*
+ * STREAMLINE CSS
+ * files: streamline.less
+ * Streamline styling
+ */
+.streamline {
+    border-color: #dee5e7;
+    position: relative;
+}
+.streamline .sl-item::after {
+    bottom: 0;
+    content: "\f111";
+    font-family: FontAwesome;
+    height: 9px;
+    left: 0;
+    color: #dee5e7;
+    font-size: 9px;
+    margin-left: -4px;
+    position: absolute;
+    width: 9px;
+}
+.sl-item {
+    border-left: 1px solid #dee5e7;
+    padding: 5px 0 10px 20px;
+    position: relative;
+    margin-left: 10px;
+}
+.sl-item::before,
+.sl-item::after {
+    content: " ";
+    display: table;
+}
+.sl-item::after {
+    clear: both;
+    bottom: auto;
+    top: 9px;
+}
+.sl-title {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+// Streamline Color
+.streamline {
+    .sl-primary {
+        border-color: @color-primary-2;
+    }
+    .sl-primary:after {
+        color: @color-primary-2;
+    }
+    .sl-info {
+        border-color: @color-info-2;
+    }
+    .sl-info:after {
+        color: @color-info-2;
+    }
+    .sl-success {
+        border-color: @color-success-2;
+    }
+    .sl-success:after {
+        color: @color-success-2;
+    }
+    .sl-warning {
+        border-color: @color-warning-2;
+    }
+    .sl-warning:after {
+        color: @color-warning-2;
+    }
+    .sl-danger {
+        border-color: @color-danger-2;
+    }
+    .sl-danger:after {
+        color: @color-danger-2;
+    }
+}

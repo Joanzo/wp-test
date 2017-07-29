@@ -1,0 +1,73 @@
+/*
+ * BLOG CSS
+ * files: blog.less
+ * Blog list and single page blog css
+ */
+.blog-title {
+    font-family: @font-primary;
+    font-weight: bold;
+    font-size: 27px;
+    margin-top: 0;
+}
+.blog-subtitle {
+    font-size: 14.5px;
+    font-weight: normal;
+    position: relative;
+    margin-bottom: 50px;
+}
+.blog-subtitle:after {
+    content: "";
+    height: 1px;
+    background: @color-body;
+    width: 120px;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+.blog-body,
+.blog-tags {
+    margin-bottom: 40px;
+}
+.blog-teaser-title {
+    font-weight: bold;
+    font-family: @font-primary;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.blog-teaser-tags {
+    color: @color-light-grey;
+    .blog-teaser-tag {
+        margin-right: 30px;
+    }
+    .blog-teaser-tag:last-child {
+        margin-right: 0;
+    }
+}
+.blog-teaser-description {
+    margin-top: 20px;
+    color: @color-grey;
+}
+.blog-teaser-image {
+    margin-top: 10px;
+}
+.blog-teaser-more {
+    margin-top: 20px;
+}
+.list-comments {
+    > .list-item {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+.comment-author {
+    margin-bottom: 5px;
+}
+.comment-body {
+    margin-bottom: 20px;
+}
+.archive-title {
+    font-weight: normal;
+    font-size: 17px;
+    margin: 0 0 5px;
+    font-family: @font-primary;
+}

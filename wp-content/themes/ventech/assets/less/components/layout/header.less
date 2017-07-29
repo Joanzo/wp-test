@@ -1,0 +1,686 @@
+/*
+ * HEADER CSS
+ * files: header.less
+ * Header CSS
+ */
+
+@color-primary-menu-text: @color-white;
+@size-primary-menu-text: 12px;
+@size-primary-menu-mega-child-text: 14px;
+@color-primary-menu-mega-child-text: #424953;
+@color-primary-menu-mega-child-text-hover-bg: @color-primary-0;
+@color-primary-menu-mega-child-text-hover-link: @color-white;
+@color-secondary-menu-text: @color-white;
+@size-secondary-menu-text: 10px;
+@color-header-bg: @color-bg-2;
+
+// STICKY SETTINGS
+@color-header-sticky-bg: @color-header-bg;
+@color-primary-menu-mega-link-sticky-text: @color-white;
+@height-header-sticky: 60px;
+
+@color-menu-responsive-bg: @color-bg-2;
+@size-side-nav-responsive-width: 240px;
+@size-side-nav-width: 300px;
+@size-header-phone-height: 60px;
+
+.sticky {
+    position: fixed !important;
+}
+header,
+.container,
+.logo {
+    transition: all 0.2s ease 0s;
+}
+header {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    .container {
+        transition: all 0.2s ease 0s;
+    }
+    .stack-additional {
+        padding-left: 20px;
+    }
+    .top-heading {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+    .top-style-right {
+        left: auto;
+        right: 0;
+        border-bottom: 1px solid @color-white;
+        width: auto;
+    }
+    .top-heading-bordered {
+        border-bottom: 1px solid @color-border-line;
+    }
+    .secondary-menu {
+        .mega-li {
+            margin-left: 30px;
+            padding: 0;
+        }
+        .mega-link {
+            color: @color-primary-menu-text;
+            font-size: @size-secondary-menu-text;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            position: relative;
+            font-weight: 300;
+        }
+        .mega-link:hover {
+            color: @color-primary-0;
+        }
+    }
+}
+// Mega Menu Styling
+.primary-menu {
+    .mega-li {
+        margin-left: 5px;
+        padding: 12px 10px;
+    }
+    .mega-link {
+        color: @color-primary-menu-text;
+        font-size: @size-primary-menu-text;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        padding: 8px 0;
+        position: relative;
+        .mega-text::before {
+            background-color: @color-primary-menu-text;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 1px;
+            left: 50%;
+            position: absolute;
+            transition: all 0.2s ease 0s;
+            width: 0;
+        }
+    }
+    .mega-link:hover > .mega-text::before {
+        left: 0;
+        width: 100%;
+    }
+    .mega-li.mega-btn {
+        padding: 4px 10px;
+    }
+    .mega-li.mega-btn-xs {
+        padding: 10px 10px;
+    }
+    .mega-li.mega-btn-sm {
+        padding: 8px 10px;
+    }
+    .mega-li.mega-btn-lg {
+        padding: 0px 10px;
+    }
+    .mega-child {
+        .content-list > .list-item {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .list-a {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            display: block;
+            font-size: @size-primary-menu-mega-child-text;
+            color: @color-primary-menu-mega-child-text;
+        }
+        .list-hover > .list-item:hover {
+            background: @color-primary-menu-mega-child-text-hover-bg;
+            color: @color-primary-menu-mega-child-text-hover-link;
+            > .list-a {
+                color: @color-primary-menu-mega-child-text-hover-link;
+            }
+        }
+        .child-title {
+            padding-left: 16px;
+            padding-right: 16px;
+            font-size: 24px;
+        }
+    }
+}
+.header-bottom {
+    transition: none;
+    .container {
+        transition: none;
+    }
+}
+// Boxed Layout Header
+.boxed-layout {
+    header {
+        padding: 10px 0;
+    }
+}
+.menu-toggle {
+    background-color: transparent;
+    border: 0 none;
+    float: right;
+    height: 40px;
+    margin: 0;
+    position: relative;
+    width: 40px;
+    .bar-icon {
+        border-radius: 0;
+        display: block;
+        height: 2px;
+        position: absolute;
+        right: 9px;
+        top: 0;
+        transition: all 0.3s ease 0s;
+        width: 22px;
+        background: @color-white;
+    }
+    .b1 {
+        top: 12px;
+    }
+    .b2 {
+        top: 19px;
+    }
+    .b3 {
+        top: 26px;
+    }
+}
+.menu-toggle:focus,
+.menu-toggle.active {
+    outline: none;
+}
+.menu-toggle.active {
+    .b1 {
+        top: 19px;
+        transform: rotate(45deg);
+    }
+    .b2 {
+        display: none;
+    }
+    .b3 {
+        top: 19px;
+        transform: rotate(-45deg);
+    }
+}
+/****************** 
+STICKY MENU CSS 
+******************/
+
+.visible-affix,
+.visible-sticky {
+    display: none;
+}
+.hidden-affix,
+.hidden-sticky {
+    display: block;
+}
+.affix .visible-affix,
+.sticky .visible-sticky,
+.stickying .visible-sticky {
+    display: block;
+}
+.affix .hidden-affix,
+.sticky .hidden-sticky,
+.stickying .hidden-sticky {
+    display: none;
+}
+body header.stickying,
+body header.sticky {
+    background: @color-header-sticky-bg;
+    padding: 5px 0;
+    .box-shadow(0px 0px 2px 0px rgba(0, 0, 0, 0.15));
+    .logo {
+        margin-left: 0;
+    }
+    .primary-menu {
+        .mega-link {
+            color: @color-primary-menu-mega-link-sticky-text;
+            .mega-text::before {
+                background-color: @color-primary-menu-mega-link-sticky-text;
+            }
+        }
+    }
+}
+body.full-layout header.stickying,
+body.full-layout header.sticky,
+body header.full-layout.stickying,
+body header.full-layout.sticky {
+    .container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+body .header-light-sticky.stickying,
+body .header-light-sticky.sticky {
+    background: @color-white;
+    .box-shadow(0px 0px 2px 0px rgba(0, 0, 0, 0.15));
+    .primary-menu {
+        .mega-link {
+            color: @color-body;
+            .mega-text::before {
+                background-color: @color-body;
+            }
+        }
+    }
+}
+body .header-dark-sticky.stickying,
+body .header-dark-sticky.sticky {
+    background: rgba(0, 0, 0, .8);
+}
+body .menu-vertical-light.stickying,
+body .menu-vertical-light.sticky {
+    .stack-primary .stack-group.menu-stack {
+        background: @color-white;
+    }
+    .primary-menu {
+        .mega-link {
+            color: @color-body;
+            .mega-text::before {
+                background-color: @color-body;
+            }
+        }
+    }
+}
+/***********************
+    STYLING VARIATIONS
+***********************/
+
+.header-light {
+    background-color: @color-white;
+    .primary-menu {
+        .mega-link {
+            color: @color-body;
+            .mega-text::before {
+                background-color: @color-body;
+            }
+        }
+    }
+    .secondary-menu {
+        .mega-link {
+            color: @color-body;
+        }
+        .mega-link:hover {
+            color: @color-primary-0;
+        }
+    }
+    .menu-toggle {
+        .bar-icon {
+            background: @color-body;
+        }
+    }
+}
+.header-bordered {
+    .box-shadow(0px 0px 1px 0px rgba(255, 255, 255, 0.85));
+}
+.header-light.header-bordered {
+    .box-shadow(0px 0px 1px 0px rgba(0, 0, 0, 0.15));
+}
+.header-xs {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.header-sm {
+    padding: 5px 0;
+}
+body .header-xs.stickying,
+body .header-xs.sticky {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+body .header-sm.stickying,
+body .header-sm.sticky {
+    padding-top: 5;
+    padding-bottom: 5;
+}
+.menu-vertical {
+    .stack-primary .stack-group.menu-stack {
+        position: fixed;
+        width: @size-side-nav-width;
+        background: @color-menu-responsive-bg;
+        top: 0;
+        right: -@size-side-nav-width;
+        height: 100%;
+        padding: 20px;
+        transition: all 0.2s ease 0s;
+        &:after {
+            height: 40px;
+            content: '';
+            display: block;
+        }
+    }
+    .stack-additional {
+        padding-left: 0;
+    }
+    .mega-menu.mega-responsive {
+        overflow: hidden;
+        > .mega-ul {
+            width: 100%;
+            > .mega-li {
+                float: none;
+                margin-left: 0;
+                display: block;
+                > .mega-link {
+                    display: block;
+                }
+            }
+        }
+        .mega-child {
+            //position: static;
+            //display: none;            
+            margin-top: 0;
+            width: 100% !important;
+            //transform-origin: 0 0;
+        }
+        .open > .mega-child {
+            position: static;
+            //display: block;
+        }
+        .open:hover {
+            background: none;
+        }
+    }
+    .primary-menu {
+        .mega-li {
+            padding: 0;
+        }
+        .mega-link {
+            padding: 12px 10px;
+        }
+        .mega-link:hover > .mega-text::before,
+        .mega-li.active > .mega-link > .mega-text::before {
+            width: 0;
+        }
+        .mega-child {
+            .list-hover .open:hover {
+                background: none !important;
+                > a {
+                    color: @color-body !important;
+                }
+            }
+            .list-a {
+                padding: 10px 15px;
+            }
+            .mega-child .list-a {
+                padding-left: 30px;
+            }
+            .mega-child .mega-child .list-a {
+                padding-left: 45px;
+            }
+            .mega-child .mega-child .mega-child .list-a {
+                padding-left: 60px;
+            }
+            .child-title {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        .mega-li > .mega-child {
+            .box-shadow(none);
+        }
+        .open-right {
+            .box-shadow(none);
+        }
+        .open-left {
+            .box-shadow(none);
+        }
+    }
+}
+.menu-vertical-light {
+    .stack-primary .stack-group.menu-stack {
+        background: @color-white;
+    }
+    .primary-menu {
+        .mega-link {
+            color: @color-body;
+            .mega-text::before {
+                background-color: @color-body;
+            }
+        }
+    }
+}
+.nav-right-show {
+    .body-inner {
+        margin-left: -@size-side-nav-width;
+        overflow: visible;
+    }
+    .cover-responsive {
+        right: @size-side-nav-width;
+    }
+    header.sticky {
+        margin-left: -@size-side-nav-width;
+    }
+    header {
+        .stack-primary .stack-group.menu-stack {
+            right: 0;
+        }
+    }
+}
+.scroll-y-visible {
+    overflow-y: scroll;
+}
+.badge-menu {
+    position: absolute;
+    top: -5px;
+    left: 20px;
+}
+@media (min-width: (@lg-width+1)) {
+    body header.stickying,
+    body header.sticky {
+        .stack-primary {
+            .stack-content, .stack-item {
+                height: @height-header-sticky;
+            }
+            .stack-img {
+                max-height: @height-header-sticky;
+            }
+        }
+    }
+    body.menu-vertical header.stickying,
+    body.menu-vertical header.sticky {
+        .menu-stack {
+            .stack-content, .stack-item {
+                height: auto;
+            }
+            .stack-img {
+                max-height: @height-header-sticky;
+            }
+        }
+    }
+}
+@media (min-width: (@md-width+1)) {
+    header {
+        .mega-li.active > .mega-link > .mega-text::before {
+            left: 0;
+            width: 100%;
+        }
+    }
+    .primary-menu {
+        .mega-li > .mega-child {
+            .box-shadow(0 6px 12px rgba(0, 0, 0, .175));
+        }
+        .open-right {
+            .box-shadow(5px 4px 8px rgba(0, 0, 0, .075));
+        }
+        .open-left {
+            .box-shadow(-5px 4px 8px rgba(0, 0, 0, .075));
+        }
+    }
+}
+@media (max-width: @xl-width) {
+    header {
+        padding: 10px 0px;
+    }
+}
+@media (max-width: @lg-width) {
+    header {
+        padding: 5px 0;
+        .stack-primary {
+            .stack-content, .stack-item {
+                height: 60px;
+            }
+            .stack-img {
+                max-height: 60px;
+            }
+        }
+        .logo {
+            margin-left: 0;
+        }
+        .stack-right {
+            margin-right: 0;
+        }
+    }
+    .primary-menu {
+        .mega-li {
+            margin-left: 0;
+        }
+        .mega-child {
+            .list-a {
+                padding: 10px 15px;
+            }
+        }
+    }
+}
+@media (max-width: @md-width) {
+    header .container,
+    header.full-layout .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .body-inner header {
+        position: fixed;
+        background: @color-header-bg;
+        padding: 5px 0;
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .menu-stack.collapse.in {
+            display: block;
+        }
+        .menu-stack.collapse {
+            display: none;
+        }
+        // Menu Stack to be fixed on right
+        .stack-primary .stack-group.menu-stack {
+            position: fixed;
+            width: @size-side-nav-responsive-width;
+            background: @color-menu-responsive-bg;
+            top: 0;
+            right: -@size-side-nav-responsive-width;
+            height: 100%;
+            padding: 20px;
+            transition: all 0.2s ease 0s;
+            &:after {
+                height: 40px;
+                content: '';
+                display: block;
+            }
+        }
+        .stack-additional {
+            padding-left: 0;
+        }
+    }
+    .primary-menu {
+        .mega-li {
+            padding: 0;
+        }
+        .mega-link {
+            padding: 12px 10px;
+        }
+        .mega-link:hover > .mega-text::before {
+            width: 0;
+        }
+        .mega-child {
+            .list-hover .open:hover {
+                background: none !important;
+                > a {
+                    color: @color-body !important;
+                }
+            }
+            .list-a {
+                padding: 10px 15px;
+            }
+            .mega-child .list-a {
+                padding-left: 30px;
+            }
+            .mega-child .mega-child .list-a {
+                padding-left: 45px;
+            }
+            .mega-child .mega-child .mega-child .list-a {
+                padding-left: 60px;
+            }
+            .child-title {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+    .body-inner .header-light {
+        background: @color-white;
+        .stack-primary .stack-group.menu-stack {
+            background-color: @color-white;
+        }
+    }
+    .body-inner .header-light-sticky.sticky {
+        .stack-primary .stack-group.menu-stack {
+            background-color: @color-white;
+        }
+        .menu-toggle {
+            .bar-icon {
+                background: @color-body;
+            }
+        }
+    }
+    .body-inner .menu-vertical-light.stickying,
+    .body-inner .menu-vertical-light.sticky,
+    .body-inner .menu-vertical-light {
+        .stack-primary .stack-group.menu-stack {
+            background: @color-white;
+        }
+        .primary-menu {
+            .mega-link {
+                color: @color-body;
+                .mega-text::before {
+                    background-color: @color-body;
+                }
+            }
+        }
+    }
+    .body-inner .header-empty {
+        position: absolute;
+    }
+    .nav-right-show {
+        .body-inner {
+            margin-left: -@size-side-nav-responsive-width;
+        }
+        .cover-responsive {
+            right: @size-side-nav-responsive-width;
+        }
+        header,
+        header.sticky {
+            margin-left: -@size-side-nav-responsive-width;
+        }
+        header {
+            .stack-primary .stack-group.menu-stack {
+                right: 0;
+            }
+        }
+    }
+    .mega-child {
+        transform-origin: 0 0;
+    }
+}
+/* IE HACKS */
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    header .mega-child {
+        .img-responsive {
+            width: 100%;
+        }
+    }
+}

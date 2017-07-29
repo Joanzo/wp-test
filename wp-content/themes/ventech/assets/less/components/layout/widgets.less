@@ -1,0 +1,42 @@
+/*
+ * WIDGETS CSS
+ * files: widgets.less
+ * Widget Default Styling
+ */
+
+@color-footer-widget-title-text: @color-primary-0;
+.sidebar {
+    margin-top: -20px;
+}
+.widget {
+    .clearfix();
+    margin-bottom: 30px;
+}
+.widget-title {
+    font-size: 18.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    margin: 20px 0 30px;
+}
+.widget-title::after {
+    background: @color-body none repeat scroll 0 0;
+    bottom: -10px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 46px;
+}
+.widget-title-light {
+    color: @color-white;
+    &:after {
+        background-color: @color-white;
+    }
+}
+footer .widget-title {
+    color: @color-footer-widget-title-text;
+}
+footer .widget-title:after {
+    background-color: @color-footer-widget-title-text;
+}

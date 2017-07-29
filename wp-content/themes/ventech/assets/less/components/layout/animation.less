@@ -1,0 +1,294 @@
+/*
+ * ANIMATIONS CSS
+ * files: animation.less
+ * Animation Related CSS in General Use
+ */
+
+/* --------------------------------- 
+   MOUSE SCROLL ANIMATION
+--------------------------------- */
+.mouse {
+    height: 42px;
+    width: 24px;
+    border-radius: 14px;
+    transform: none;
+    border: 2px solid @color-white;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    opacity: .6;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+.mouse:hover {
+    opacity: 1;
+}
+.wheel {
+    height: 5px;
+    width: 2px;
+    display: block;
+    margin: 5px auto;
+    background: white;
+    position: relative;
+    height: 4px;
+    width: 4px;
+    border: 2px solid @color-white;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+.wheel {
+    -webkit-animation: mouse-wheel 0.6s linear infinite;
+    -moz-animation: mouse-wheel 0.6s linear infinite;
+}
+@-webkit-keyframes mouse-wheel {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        transform: translateY(6px);
+    }
+}
+@-moz-keyframes mouse-wheel {
+    0% {
+        top: 1px;
+    }
+    25% {
+        top: 2px;
+    }
+    50% {
+        top: 3px;
+    }
+    75% {
+        top: 2px;
+    }
+    100% {
+        top: 1px;
+    }
+}
+/* --------------------------------- 
+   PRELOADER SQUARE SPLIT ANIMATION
+--------------------------------- */
+
+.loader-container {
+    opacity: 0;
+    transition: all 1s ease .1s;
+}
+.active .loader-container {
+    opacity: 1;
+}
+.active .square-split .loader {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3D(-50%, -50%, 0);
+    -ms-transform: translate3D(-50%, -50%, 0);
+    transform: translate3D(-50%, -50%, 0);
+    > div {
+        float: left;
+        width: 50%;
+        height: 50%;
+    }
+    > div::after {
+        content: '';
+        display: block;
+        margin: 50% 0 0 50%;
+        width: 50%;
+        height: 50%;
+        //background: #FFF;
+        -webkit-animation: squareSplit 2s infinite ease-in-out alternate;
+        animation: squareSplit 2s infinite ease-in-out alternate;
+    }
+    .square-2 {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    .square-3 {
+        -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
+        -webkit-animation-direction: reverse;
+        animation-direction: reverse;
+    }
+    .square-4 {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+        -webkit-animation-direction: reverse;
+        animation-direction: reverse;
+    }
+    > .square-1:after {
+        background: @color-primary-1;
+    }
+    > .square-2:after {
+        background: @color-primary-2;
+    }
+    > .square-3:after {
+        background: @color-primary-2;
+    }
+    > .square-4:after {
+        background: @color-primary-3;
+    }
+}
+@-webkit-keyframes squareSplit {
+    20% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        margin: 50% 0 0 50%;
+    }
+    50% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin: 0px;
+    }
+    80% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        margin: 50% 0 0 50%;
+    }
+    100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        margin: 50% 0 0 50%;
+    }
+}
+@keyframes squareSplit {
+    20% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        margin: 50% 0 0 50%;
+    }
+    50% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin: 0px;
+    }
+    80% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        margin: 50% 0 0 50%;
+    }
+    100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        margin: 50% 0 0 50%;
+    }
+}
+/* --------------------------------- 
+   IMAGE HOVER ANIMATION
+--------------------------------- */
+
+.anim {
+    > .anim-link {
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+    .anim-cover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .anim-box {
+            opacity: 0;
+            background: rgba(0, 0, 0, .6);
+            width: 100%;
+            height: 100%;
+            .anim-border {
+                border: 1px solid @color-white;
+                width: 100%;
+                height: 100%;
+                display: table;
+                .anim-info {
+                    display: table-cell;
+                    text-align: center;
+                    vertical-align: middle;
+                    color: @color-white;
+                }
+            }
+        }
+    }
+    .anim-img {
+        max-width: 100%;
+    }
+    .anim-box,
+    .anim-info,
+    .plus-icon,
+    .anim-img {
+        transition: all 600ms ease 0s;
+    }
+}
+.anim:hover {
+    .anim-cover .anim-box {
+        opacity: 1;
+        padding: 20px;
+        //opacity:.8;
+    }
+    .anim-img {
+        transform: scale(1.2, 1.2) rotate(0deg);
+    }
+}
+.anim-light {
+    .anim-cover {
+        .anim-box {
+            background: rgba(255, 255, 255, .8);
+            .anim-border {
+                border-color: @color-body;
+                .anim-info {
+                    color: @color-body;
+                }
+            }
+        }
+    }
+}
+.anim-slide:hover .anim-slide-info {
+    margin-bottom: 0;
+    background: rgba(0, 0, 0, .6);
+}
+.anim-slide .anim-slide-info {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transition: all 0.2s ease 0s;
+    background: rgba(0, 0, 0, .4);
+    margin-bottom: -112px;
+}
+.anim-slide-light:hover .anim-slide-info {
+    background: rgba(255, 255, 255, .85);
+}
+.anim-slide-light .anim-slide-info {
+    background: rgba(255, 255, 255, .6);
+}
+@media (max-width: @md-width) {
+    .anim-slide .anim-slide-info {
+        margin-bottom: 0;
+    }
+}
+/* IE HACKS */
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .anim .anim-cover .plus-icon {
+        display: none;
+    }
+    .anim:hover .anim-cover .plus-icon {
+        display: block;
+    }
+}
+body .animated {
+    opacity: 1;
+}
+.ready .animsition {
+    opacity: 1;
+}

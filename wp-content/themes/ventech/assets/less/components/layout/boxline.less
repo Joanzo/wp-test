@@ -1,0 +1,62 @@
+/*
+ * BOXLINE CSS
+ * files: boxline.less
+ * Text wrapped in a line box CSS
+ */
+.boxline {
+    margin: 0 auto;
+    padding: 120px 0px;
+    .bl-border {
+        position: relative;
+        border: 1px solid @color-white;
+        border-bottom: none;
+    }
+    .bl-body {
+        padding: 65px 75px 75px;
+        position: relative;
+        display: block;
+    }
+    .bl-footer {
+        position: absolute;
+        width: 100%;
+        bottom: -23px;
+    }
+}
+.boxline-default .bl-border {
+    border-color: @color-default;
+}
+.boxline-primary .bl-border {
+    border-color: @color-primary-2;
+}
+.boxline-info .bl-border {
+    border-color: @color-info-2;
+}
+.boxline-success .bl-border {
+    border-color: @color-success-2;
+}
+.boxline-warning .bl-border {
+    border-color: @color-warning-2;
+}
+.boxline-danger .bl-border {
+    border-color: @color-warning-2;
+}
+
+@media (max-width: @lg-width) {
+    .boxline {
+        padding-left: 45px;
+        padding-right: 45px;
+        .bl-body {
+            padding: 45px 45px 75px;
+        }
+    }
+}
+
+@media (max-width: @sm-width) {
+    .boxline {
+        padding-left: 25px;
+        padding-right: 25px;
+        .bl-body {
+            padding: 25px 25px 65px;
+        }
+    }
+}

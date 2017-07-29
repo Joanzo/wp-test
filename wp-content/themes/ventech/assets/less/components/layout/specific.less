@@ -1,0 +1,217 @@
+/*
+ * SPECIFIC PAGE CSS
+ * files: specific.less
+ * Specific page css for specific purpose
+ */
+/***************************************
+    index.html 
+****************************************/
+
+.mockup-devices-home {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    left: 0;
+}
+/***************************************
+    index-onepage-app-showcase.html 
+****************************************/
+
+.phone-slider-container {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 320px;
+    z-index: 1;
+}
+.phone-slider {
+    position: absolute;
+    top: 86px;
+    left: 39px;
+    width: 241px;
+}
+.mockup-devices-top {
+    width: 100%;
+    position: absolute;
+    top: 210px;
+    right: 0px;
+}
+.iphone-devices-mockup {
+    position: absolute;
+    width: 100%;
+    right: 45px;
+    top: 0px;
+}
+.iphone-01,
+.iphone-02,
+.iphone-03 {
+    position: absolute;
+}
+.iphone-01 {
+    right: -200px;
+    top: 90px;
+}
+.iphone-02 {
+    right: -44px;
+    top: 275px;
+}
+.iphone-03 {
+    right: -493px;
+    top: -16px;
+}
+.ipad-devices-mockup {
+    position: absolute;
+    left: -350px;
+    top: -40px;
+}
+/***************************************
+    index-onepage-product-landing.html 
+****************************************/
+
+.product-iphone {
+    position: absolute;
+    bottom: -115px;
+    right: 60px;
+    width: 100%;
+    z-index: 1;
+}
+
+/***************************************
+    index-onepage-product-landing.html, 
+    index-onepage-app-showcase.html
+****************************************/
+.section-product-header {
+    .product-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+/***************************************
+    features-icons.html,
+    features-icons-2.html,
+    features-icons-3.html
+****************************************/
+.icons-list {
+    .icon-hover {
+        margin-bottom: 10px;
+        height: 40px;
+        a {
+            color: #000;
+        }
+        .icon-item {
+            width: 40px;
+            font-size: 1.6em;
+            vertical-align: middle;
+        }
+    }
+    .icon-hover:hover {
+        .icon-item {
+            font-size: 2em;
+            position: absolute;
+            background: @color-bg-0;
+            color: @color-white;
+            width: 50px;
+            height: 50px;
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+            left: 0px;
+            top: -15px;
+        }
+        a {
+            padding-left: 50px;
+        }
+    }
+}
+.hawcon-icons {
+    .icons-list {
+        .icon-hover {
+            .icon-item {
+                font-size: 2.3em;
+            }
+        }
+        .icon-hover:hover {
+            .icon-item {
+                font-size: 2.8em;
+                padding: 5px 0;
+            }
+        }
+    }
+}
+
+
+@media (max-width: @xl-width) {
+    .section-product-header {
+        .product-img {
+            position: absolute;
+            top: -30px;
+            right: 0;
+        }
+    }
+    .iphone-devices-mockup {
+        width: 400px;
+    }
+    .iphone-01 {
+        right: 10px;
+        bottom: 128px;
+    }
+    .iphone-02 {
+        right: 157px;
+        bottom: 25px;
+    }
+    .iphone-03 {
+        right: -135px;
+        bottom: 223px;
+    }
+    .ipad-devices-mockup {
+        width: 860px;
+        bottom: -20px;
+    }
+    .mockup-devices-home {
+        top: 80px;
+    }
+}
+
+@media (max-width: @lg-width) {
+    .phone-slider-container {
+        top: 200px;
+        left: 10px;
+    }
+    .mockup-devices-top,
+    .mockup-devices-home {
+        position: static;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        top: 0px;
+        left: 0;
+        margin-top: 30px;
+        width: auto;
+    }
+    .product-iphone {
+        width: 200px;
+        right: 0;
+        bottom: -130px;
+    }
+}
+@media (max-width: @md-width) {
+    .section-product-header {
+        overflow: hidden;
+    }
+    .phone-slider-container {
+        position: relative;
+        height: 580px;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        top: 110px;
+        left: 0;
+    }
+    .product-iphone {
+        bottom: -30px;
+    }
+}

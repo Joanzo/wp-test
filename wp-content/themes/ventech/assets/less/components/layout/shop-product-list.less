@@ -1,0 +1,105 @@
+/*
+ * SHOP PRODUCT LIST CSS
+ * files: shop-product-list.less
+ * Product List Styling
+ */
+.shop-list {
+    .sl-visible {
+        display: block;
+    }
+    .sl-hidden {
+        display: none;
+    }
+}
+.shop-grid {
+    .sg-visible {
+        display: block;
+    }
+    .sg-hidden {
+        display: none;
+    }
+}
+.product-teaser-img {
+    overflow: hidden;
+    border-bottom: 1px solid @color-border-line;
+}
+.product-teaser-img {
+    .slick-arrow {
+        transition: all 0.4s ease 0s;
+    }
+}
+.shop-list .product-teaser-img {
+    border-bottom: none;
+}
+.product-tag {
+    background-color: @color-danger-0;
+    padding: 6px 10px;
+    font-size: 14px;
+    color: @color-white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 300;
+}
+.shop-list .product-tag {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.product-teaser-title {
+    font-size: 15.5px;
+    font-family: @font-primary;
+    position: relative;
+    margin: 20px 0 30px;
+    font-weight: 300;
+    height: 41px;
+}
+.product-teaser-title::after {
+    background: @color-body none repeat scroll 0 0;
+    bottom: -10px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 46px;
+}
+.product-teaser-body {
+    margin-bottom: 10px;
+}
+.product-teaser-price {
+    font-size: 15.5px;
+    .product-price {
+        color: @color-danger-0;
+    }
+}
+.product-teaser-quantity {
+    margin-top: 10px;
+}
+.price-stroke {
+    color: @color-body;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.product-teaser-rating {
+    height: 22px;
+}
+.product-teaser-button {
+    margin-top: 20px;
+    transition: all 0.4s ease 0s;
+    transform: scale(1, 0);
+    transform-origin: 50 0;
+}
+.product-list > .list-item:hover,
+.li-hover:hover {
+    .product-teaser-button {
+        transform: scale(1);
+        opacity: 1;
+    }
+    .product-teaser-img {
+        .slick-prev {
+            left: 5px;
+        }
+        .slick-next {
+            right: 5px;
+        }
+    }
+}

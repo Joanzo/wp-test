@@ -1,0 +1,83 @@
+/*
+ * MILESTONE CSS
+ * files: milestone.less
+ * Milestone Styling
+ */
+.milestone {
+    .ms-circle {
+        width: 180px;
+        height: 180px;
+        text-align: center;
+        border: 1px solid @color-body;
+        border-radius: 50%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .ms-circle-sm {
+        width: 160px;
+        height: 160px;
+    }
+    .ms-title {
+        font-size: 44px;
+        font-family: @font-secondary;
+        line-height: 44px;
+        font-weight: bold;
+    }
+    .ms-subtitle {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+}
+.milestone-dark {
+    .ms-circle {
+        border-color: @color-white;
+    }
+}
+.milestone-4-columns {
+    .first {
+        left: 96px;
+    }
+    .second {
+        left: 32px;
+    }
+    .third {
+        left: -32px;
+    }
+    .fourth {
+        left: -96px;
+    }
+}
+
+@media (max-width: @lg-width) {
+    .milestone-4-columns {
+        .first {
+            left: 48px;
+        }
+        .second {
+            left: -48px;
+        }
+        .third {
+            left: 48px;
+        }
+        .fourth {
+            left: -48px;
+        }
+    }
+}
+
+@media (max-width: @md-width) {
+    .milestone-4-columns {
+        .first {
+            left: 0;
+        }
+        .second {
+            left: 0;
+        }
+        .third {
+            left: 0;
+        }
+        .fourth {
+            left: 0;
+        }
+    }
+}

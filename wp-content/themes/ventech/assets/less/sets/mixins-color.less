@@ -1,0 +1,296 @@
+@import "variables.less";
+@import "mixins.less";
+
+.theme-color(@color-theme-0, @color-theme-1, @color-theme-2, @color-theme-3, @color-theme-4) {
+    /*  ------------------------------
+        Animation
+    ------------------------------  */
+    .active .square-split .loader {
+        > .square-1:after {
+            background: @color-theme-1;
+        }
+        > .square-2:after {
+            background: @color-theme-2;
+        }
+        > .square-3:after {
+            background: @color-theme-2;
+        }
+        > .square-4:after {
+            background: @color-theme-3;
+        }
+    }
+    /*  ------------------------------
+        Element & Form
+    ------------------------------  */
+    a {
+        color: @color-theme-3;
+        &:hover,
+        &:focus {
+            color: @color-theme-0;
+        }
+    }
+    .label-primary {
+        background-color: @color-theme-2;
+    }
+    .btn-primary {
+        border-color: @color-theme-0;
+        background-color: @color-theme-0;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open > .dropdown-toggle.btn-primary {
+        border-color: @color-theme-4;
+        background-color: @color-theme-4;
+    }
+    .btn-primary.active.focus,
+    .btn-primary.active:focus,
+    .btn-primary.active:hover,
+    .btn-primary.focus:active,
+    .btn-primary:active:focus,
+    .btn-primary:active:hover,
+    .open > .dropdown-toggle.btn-theme.focus,
+    .open > .dropdown-toggle.btn-theme:focus,
+    .open > .dropdown-toggle.btn-theme:hover {
+        border-color: @color-theme-4;
+        background-color: @color-theme-4;
+    }
+    .btn-primary.disabled.focus,
+    .btn-primary.disabled:focus,
+    .btn-primary.disabled:hover,
+    .btn-primary.focus[disabled],
+    .btn-primary[disabled]:focus,
+    .btn-primary[disabled]:hover,
+    fieldset[disabled] .btn-primary.focus,
+    fieldset[disabled] .btn-primary:focus,
+    fieldset[disabled] .btn-primary:hover {
+        background-color: @color-theme-0;
+        border-color: @color-theme-0;
+    }
+    .btn-link {
+        color: @color-theme-0;
+    }
+    .btn-link:hover,
+    .btn-link:focus,
+    .btn-link:active,
+    .btn-link.active,
+    .open > .dropdown-toggle.btn-link {
+        color: @color-theme-3
+    }
+    .btn-link.active.focus,
+    .btn-link.active:focus,
+    .btn-link.active:hover,
+    .btn-link.focus:active,
+    .btn-link:active:focus,
+    .btn-link:active:hover,
+    .open > .dropdown-toggle.btn-link.focus,
+    .open > .dropdown-toggle.btn-link:focus,
+    .open > .dropdown-toggle.btn-link:hover {
+        color: @color-theme-4;
+    }
+    .btn-line.btn-primary {
+        color: @color-theme-0;
+        background: none;
+    }
+    .btn-line.btn-primary:hover,
+    .btn-line.btn-primary:focus,
+    .btn-line.btn-primary.active {
+        color: @color-white;
+        background: @color-theme-4;
+    }
+    .btn-anim:before {
+        background: @color-theme-0;
+    }
+    .btn-anim.btn-primary:before {
+        background-color: @color-theme-0;
+    }
+    .table {
+        .row-primary td {
+            background-color: @color-theme-1;
+        }
+    }
+    .panel-primary {
+        border-color: @color-theme-1;
+        > .panel-heading {
+            background-color: @color-theme-1;
+            color: @color-white;
+            a:hover, a:active, a:focus {
+                color: @color-light-white;
+            }
+        }
+    }
+    .pagination > li > a,
+    .pagination > li > span {
+        color: @color-theme-0;
+    }
+    .pagination > .active > a,
+    .pagination > .active > span,
+    .pagination > .active > a:hover,
+    .pagination > .active > span:hover,
+    .pagination > .active > a:focus,
+    .pagination > .active > span:focus {
+        background-color: @color-theme-0;
+        border-color: @color-theme-0;
+    }
+    .pagination > .active > a,
+    .pagination > .active > span,
+    .pagination > .active > a:hover,
+    .pagination > .active > span:hover,
+    .pagination > .active > a:focus,
+    .pagination > .active > span:focus {
+        color: @color-white;
+    }
+    .nav-pills > li.active > a,
+    .nav-pills > li.active > a:hover,
+    .nav-pills > li.active > a:focus {
+        background-color: @color-theme-0;
+    }
+    .form-control:focus {
+        border-color: @color-theme-0;
+    }
+    .input-minimal:focus {
+        border-bottom-color: @color-theme-0;
+    }
+    .input-group-minimal.focus {
+        > .form-control, > .input-group-addon {
+            border-bottom-color: @color-theme-0;
+        }
+    }
+    /*  ------------------------------
+        Header
+    ------------------------------  */
+    .primary-menu {
+        .mega-child {
+            .list-hover > .list-item:hover {
+                background: @color-theme-0;
+            }
+        }
+    }
+    .header-light {
+        .secondary-menu {
+            .mega-link:hover {
+                color: @color-theme-0;
+            }
+        }
+    }
+    /*  ------------------------------
+        Components
+    ------------------------------  */
+    .tl-primary .tl-caption:before {
+        background-color: @color-theme-2;
+    }
+    .streamline {
+        .sl-primary, 
+        .sl-primary:after {
+            border-color: @color-theme-2;
+        }
+    }
+    .plan-featured,
+    .pricing-table-dark .plan-featured {
+        border-color: @color-theme-1;
+    }
+    .boxline-primary .bl-border {
+        border-color: @color-theme-2;
+    }
+    .section-product-title:after {
+        background: @color-theme-0;
+    }
+    /*  ------------------------------
+        Widgets
+    ------------------------------  */
+    footer .widget-title {
+        color: @color-theme-0;
+    }
+    footer .widget-title:after {
+        background-color: @color-theme-0;
+    }
+    /*  ------------------------------
+        Independent CSS
+    ------------------------------  */
+    .text-primary-0,
+    .text-primary {
+        color: @color-theme-0 !important;
+    }
+    .text-primary-1 {
+        color: @color-theme-1 !important;
+    }
+    .text-primary-2 {
+        color: @color-theme-2 !important;
+    }
+    .text-primary-3 {
+        color: @color-theme-3 !important;
+    }
+    .text-primary-4 {
+        color: @color-theme-4 !important;
+    }
+    .bg-primary-0,
+    .bg-primary {
+        background-color: @color-theme-0 !important;
+    }
+    .bg-primary-1 {
+        background-color: @color-theme-1 !important;
+    }
+    .bg-primary-2 {
+        background-color: @color-theme-2 !important;
+    }
+    .bg-primary-3 {
+        background-color: @color-theme-3 !important;
+    }
+    .bg-primary-4 {
+        background-color: @color-theme-4 !important;
+    }
+    .bd-primary-0,
+    .bd-primary {
+        border-color: @color-theme-0 !important;
+    }
+    .bd-primary-1 {
+        border-color: @color-theme-1 !important;
+    }
+    .bd-primary-2 {
+        border-color: @color-theme-2 !important;
+    }
+    .bd-primary-3 {
+        border-color: @color-theme-3 !important;
+    }
+    .bd-primary-4 {
+        border-color: @color-theme-4 !important;
+    }
+    .textline-center.textline-primary .line:before,
+    .textline-center.textline-primary .line:after,
+    .textline-left.textline-primary .line:after,
+    .textline-right.textline-primary .line:before {
+        background-color: @color-theme-1;
+    }
+    .link-body:active,
+    .link-body:hover,
+    .link-body:focus {
+        color: @color-theme-2;
+    }
+    .link-white:active,
+    .link-white:hover,
+    .link-white:focus {
+        color: @color-theme-2;
+    }
+    /*  ------------------------------
+        Plugins
+    ------------------------------  */
+    // Slick Slider
+    .slick-dots li button::before,
+    .slick-dots li.slick-active button::before {
+        color: @color-theme-0;
+    }
+    // Master Slider
+    .ms-skin-light-thin .ms-bullet-selected {
+        background-color: @color-theme-3;
+        border-color: @color-theme-3;
+    }
+    .ms-staff-carousel {
+        .ms-slide-info {
+            .ms-info {
+                .rgbaColorIn(@color-theme-0,0.80);
+                background: @result;
+            }
+        }
+    }
+}
