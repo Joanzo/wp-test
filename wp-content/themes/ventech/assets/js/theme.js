@@ -83,7 +83,7 @@ Note: You can search using the title above
 
 "use strict";
 
-var ThemeApp = function()
+var ThemeApp = function($)
 {
 
     /*********************
@@ -1945,7 +1945,7 @@ var ThemeApp = function()
         }
     }
 
-}();
+}(jQuery);
 
 ThemeApp.init();
 
