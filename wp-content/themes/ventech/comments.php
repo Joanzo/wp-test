@@ -17,7 +17,7 @@ if (post_password_required()) {
         'comment_field' => '<div class="form-group">
         <div class="col-md-12">
             <div class="label-wrapper">
-                <label class="control-label font-xs-2 font-light" for="comment-message-field">
+                <label class="control-label font-xs-2 font-light" for="comment">
                     Message
                     <span class="text-danger">
                         *
@@ -25,7 +25,7 @@ if (post_password_required()) {
                 </label>
             </div>
             <div id="message-input-wrapper">
-                <textarea class="form-control input-minimal" id="comment-message-field" name="comment-message-field" cols="32" rows="10">                                    </textarea>
+                <textarea class="form-control input-minimal" id="comment" name="comment" cols="32" rows="10">                                    </textarea>
             </div>
         </div>
     </div>',
@@ -33,7 +33,7 @@ if (post_password_required()) {
             'author' => '<div class="form-group">
             <div class="col-md-4 mgb-xs-15 mgb-md-0">
                 <div class="label-wrapper">
-                    <label class="control-label font-xs-2 font-light" for="comment-name-field">
+                    <label class="control-label font-xs-2 font-light" for="author">
                         Name
                         <span class="text-danger">
                             *
@@ -41,12 +41,12 @@ if (post_password_required()) {
                     </label>
                 </div>
                 <div id="name-input-wrapper">
-                    <input type="text" class="form-control input-minimal" required="" name="authjor" id="comment-name-field" placeholder="John Doe">
+                    <input type="text" class="form-control input-minimal" required="" name="author" id="author" placeholder="John Doe">
                 </div>
             </div>',
             'email' => '<div class="col-md-4 mgb-xs-15 mgb-md-0">
             <div class="label-wrapper">
-                <label class="control-label font-xs-2 font-light" for="comment-email-field">
+                <label class="control-label font-xs-2 font-light" for="email">
                     Email
                     <span class="text-danger">
                         *
@@ -54,17 +54,17 @@ if (post_password_required()) {
                 </label>
             </div>
             <div id="email-input-wrapper">
-                <input type="email" class="form-control input-minimal" required="" name="comment-email-field" id="comment-email-field" placeholder="name@company.com">
+                <input type="email" class="form-control input-minimal" required="" name="email" id="email" placeholder="name@company.com">
             </div>
         </div>',
             'url' => '<div class="col-md-4">
             <div class="label-wrapper">
-                <label class="control-label font-xs-2 font-light" for="comment-website-field">
+                <label class="control-label font-xs-2 font-light" for="url">
                     Website
                 </label>
             </div>
             <div id="website-input-wrapper">
-                <input type="url" class="form-control input-minimal" name="url" id="comment-website-field" placeholder="http://www.yourwebsite.com">
+                <input type="url" class="form-control input-minimal" name="url" id="url" placeholder="http://www.yourwebsite.com">
             </div>
         </div></div>'
         ),

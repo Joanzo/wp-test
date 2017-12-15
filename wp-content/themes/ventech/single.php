@@ -169,6 +169,63 @@ get_header(); ?>
                         <div class="clearfix"></div>
                     </div>
 
+
+                    <hr class="mgt-50 mgb-50"/>
+
+                    <h3 class="section-title">
+                        Author
+                    </h3>
+
+                    <ul class="content-list list-md list-icon-bordered list-icon-circle list-vm">
+                        <li class="list-item">
+                            <a class="menu-item menu-icon" href="<?php echo $author_url; ?>">
+                                <?php echo get_avatar(get_the_author_meta( 'ID' ), 90, '', false, array('class' => 'menu-i')); ?>
+                            </a>
+                            <div class="menu-item menu-text">
+                                <div class="font-xs-4">
+                                    <?php the_author_link(); ?>
+                                </div>
+                                <div class="text-light-grey mgt-5">
+                                    <?php echo nl2br(get_the_author_meta('description')) ?>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+
+                    <hr class="mgt-50 mgb-50"/>
+
+                    <h3 class="section-title">
+                        Related Posts
+                    </h3>
+
+                    <?php
+                    
+                    $categories = get_the_category();
+
+
+                    $rp_query = new WP_Query(array(
+                        'posts_per_page' => 2,
+                        'post__not_in'   => array($post->ID),
+                        'cat'            => $categories[0]->term_id
+                    ));
+
+                    if ($rp_query->have_posts()) {
+                        while($rp_query->have_posts()) {
+                            $rp_query-> the_post();
+                            ?>
+                            
+                            
+                            
+                            
+                            <?php
+                            the_title();
+                        }
+                    }
+                    
+                    ?>
+
+
                     <hr class="mgt-50 mgb-50"/>
             
 
